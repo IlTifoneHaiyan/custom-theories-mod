@@ -26,7 +26,7 @@ var releaseOrder = "8";
 requiresGameVersion("1.4.38");
 
 const tauRate = 1;
-const pubExponent = 0.17;
+const pubExponent = 0.27;
 
 const mu0 = BigNumber.FOUR * BigNumber.PI * BigNumber.from(1e-7);
 const q0 = BigNumber.from(1.602e-19);
