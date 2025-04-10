@@ -9,10 +9,10 @@ import { FontAttributes } from "../api/ui/properties/FontAttributes";
 import { Thickness } from "../api/ui/properties/Thickness";
 import { LayoutOptions } from "../api/ui/properties/LayoutOptions";
 
-var id = "magnetic_fields";
-var name = "Magnetic Fields";
+var id = "magnetic_fields++";
+var name = "Magnetic Fields++";
 var description = 
-"A Custom Theory to explore the basic concepts of Magnetic Fields.\n"+
+"A KKKustom Theory to explore the basic conceptSS of MagnetiKKK FieldSS.\n"+
 "Discover the equations that describe the movement of a charged particle inside a solenoid of infinite length.\n"+
 "Watch how rho grows as the particle moves away from its starting position and the magnetic field becomes stronger.\n"+
 "Reset the particle's position to update its velocity to increase your long-term benefits.\n"+
@@ -288,7 +288,7 @@ var init = () => {
     // c1
     {
         let getDesc = (level) => "c_1=" + getC1(level).toString(0);
-        c1 = theory.createUpgrade(2, currency, new FirstFreeCost(new ExponentialCost(10, Math.log2(2))));
+        c1 = theory.createUpgrade(2, currency, new FirstFreeCost(new ExponentialCost(10, Math.log2(1.5))));
         c1.getDescription = (_) => Utils.getMath(getDesc(c1.level));
         c1.getInfo = (amount) => Utils.getMathTo(getDesc(c1.level), getDesc(c1.level + amount));
     }
@@ -297,7 +297,7 @@ var init = () => {
     {
         let getDesc = (level) => "c_2=2^{" + level + "}";
         let getInfo = (level) => "c_2=" + getC2(level).toString(0);
-        c2 = theory.createUpgrade(3, currency, new ExponentialCost(1000, Math.log2(50)));
+        c2 = theory.createUpgrade(3, currency, new ExponentialCost(1000, Math.log2(20)));
         c2.getDescription = (_) => Utils.getMath(getDesc(c2.level));
         c2.getInfo = (amount) => Utils.getMathTo(getInfo(c2.level), getInfo(c2.level + amount));
     }
@@ -305,7 +305,7 @@ var init = () => {
     // a1
     {
         let getDesc = (level) => "a_1=" + getA1(level).toString(0);
-        a1 = theory.createUpgrade(4, currency, new ExponentialCost(1000, Math.log2(25)));
+        a1 = theory.createUpgrade(4, currency, new ExponentialCost(100, Math.log2(25)));
         a1.getDescription = (_) => Utils.getMath(getDesc(a1.level));
         a1.getInfo = (amount) => Utils.getMathTo(getDesc(a1.level), getDesc(a1.level + amount));
     }
@@ -314,16 +314,16 @@ var init = () => {
     {
         let getDesc = (level) => "a_2={1.25}^{" + level + "}";
         let getInfo = (level) => "a_2=" + getA2(level).toString(3);
-        a2 = theory.createUpgrade(5, currency, new ExponentialCost(1e4, Math.log2(100)));
+        a2 = theory.createUpgrade(5, currency, new ExponentialCost(5e2, Math.log2(100)));
         a2.getDescription = (_) => Utils.getMath(getDesc(a2.level));
         a2.getInfo = (amount) => Utils.getMathTo(getInfo(a2.level), getInfo(a2.level + amount));
     }
 
     // delta
     {
-        let getDesc = (level) => "{\\delta}={1.1}^{" + level + "}";
+        let getDesc = (level) => "{\\delta}={1.3}^{" + level + "}";
         let getInfo = (level) => "{\\delta}=" + getDelta(level).toString(3);
-        delta = theory.createUpgrade(6, currency, new ExponentialCost(1e50, Math.log2(300)));
+        delta = theory.createUpgrade(6, currency, new ExponentialCost(1e50, Math.log2(49)));
         delta.getDescription = (_) => Utils.getMath(getDesc(delta.level));
         delta.getInfo = (amount) => Utils.getMathTo(getInfo(delta.level), getInfo(delta.level + amount));
     }
@@ -331,7 +331,7 @@ var init = () => {
     // v1
     {
         let getDesc = (level) => "v_1=" + getV1(level).toString(0);
-        v1 = theory.createUpgrade(7, currency, new ExponentialCost(80, Math.log2(80)));
+        v1 = theory.createUpgrade(7, currency, new ExponentialCost(80, Math.log2(20)));
         v1.getDescription = (_) => Utils.getMath(getDesc(v1.level));
         v1.getInfo = (amount) => Utils.getMathTo(getDesc(v1.level), getDesc(v1.level + amount));
     }
@@ -340,7 +340,7 @@ var init = () => {
     {
         let getDesc = (level) => "v_2={1.3}^{" + level + "}";
         let getInfo = (level) => "v_2=" + getV2(level).toString(3);
-        v2 = theory.createUpgrade(8, currency, new ExponentialCost(1e4, 4.5*Math.log2(10)));
+        v2 = theory.createUpgrade(8, currency, new ExponentialCost(5e3, Math.log2(10)));
         v2.getDescription = (_) => Utils.getMath(getDesc(v2.level));
         v2.getInfo = (amount) => Utils.getMathTo(getInfo(v2.level), getInfo(v2.level + amount));
     }
@@ -348,7 +348,7 @@ var init = () => {
     // v3
     {
         let getDesc = (level) => "v_3=" + getV3(level).toString(0);
-        v3 = theory.createUpgrade(9, currency, new ExponentialCost(1e50, Math.log2(70)));
+        v3 = theory.createUpgrade(9, currency, new ExponentialCost(1e49, Math.log2(24)));
         v3.getDescription = (_) => Utils.getMath(getDesc(v3.level));
         v3.getInfo = (amount) => Utils.getMathTo(getDesc(v3.level), getDesc(v3.level + amount));
     }
@@ -507,7 +507,7 @@ var init = () => {
     story6 += "You decide to organize a small party with the physics students that helped you throughout your journey.\n"
     story6 += "That was a long investment, but you feel like it was worth it.\n"
     story6 += "You miss pure mathematics but, at the same time, you want to explore more physics domains.\n"
-    story6 += "One thing you're certain, is that this project marked a big step in your life.\n"
+    story6 += "One thing you're certain, is that this project marked a big step in your life. VABBÈ STICAZZI!!\n"
     chapter6 = theory.createStoryChapter(5, "An accomplishment", story6, () => theory.tau > endtau);
 
     updateAvailability();
@@ -794,11 +794,11 @@ var getC1 = (level) => Utils.getStepwisePowerSum(level, 2, 7, 0);
 var getC2 = (level) => BigNumber.TWO.pow(level);
 var getA1 = (level) => Utils.getStepwisePowerSum(level, 2, 5, 3);
 var getA2 = (level) => BigNumber.from(1.25).pow(level);
-var getDelta = (level) => deltaVariable.level > 0 ? BigNumber.from(1.1).pow(level) : BigNumber.ONE;
+var getDelta = (level) => deltaVariable.level > 0 ? BigNumber.from(1.3).pow(level) : BigNumber.ONE;
 var getV1 = (level) => Utils.getStepwisePowerSum(level, 2, 10, 1);
-var getV2 = (level) => BigNumber.from(1.3).pow(level);
+var getV2 = (level) => BigNumber.from(1.5).pow(level);
 var getV3 = (level) => Utils.getStepwisePowerSum(level, 2, 10, 0);
-var getV4 = (level) => BigNumber.from(1.5).pow(level);
+var getV4 = (level) => BigNumber.from(1.7).pow(level);
 
 
 init();
